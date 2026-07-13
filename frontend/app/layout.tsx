@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html
+  lang="en"
+  suppressHydrationWarning
+  className={`${inter.variable} ${poppins.variable}`}
+>
       <body className="min-h-screen bg-slate-50 font-sans text-slate-950 antialiased dark:bg-slate-950 dark:text-slate-100">
         <ThemeProvider>
           <ReactQueryProvider>

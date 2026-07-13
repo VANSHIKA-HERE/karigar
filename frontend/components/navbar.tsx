@@ -5,9 +5,9 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigation = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/" },
-  { label: "About", href: "/" },
-  { label: "Contact", href: "/" }
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -21,7 +21,7 @@ export function Navbar() {
         <nav className="hidden items-center gap-6 md:flex">
           {navigation.map((item) => (
             <Link
-              key={item.href}
+              key={item.label}
               href={item.href}
               className="text-sm font-medium text-slate-600 transition hover:text-slate-950 dark:text-slate-300 dark:hover:text-white"
             >
